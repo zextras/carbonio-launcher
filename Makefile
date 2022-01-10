@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2022 Zextras <https://www.zextras.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+
 # Build mailboxd launcher and manager process.  Note that paths you
 # specify here must not be owned in the install by less privileged
 # user who could then hijack this launcher binary.  The defaults are
@@ -14,18 +18,18 @@ all: $(BUILD) $(BUILD)/zmmailboxdmgr $(BUILD)/zmmailboxdmgr.unrestricted
 $(BUILD):
 	mkdir $(BUILD)
 
-JAVA_BINARY ?= /opt/zimbra/common/bin/java
-MAILBOXD_MANAGER_PIDFILE ?= /opt/zimbra/log/zmmailboxd_manager.pid
-MAILBOXD_MANAGER_DEPRECATED_PIDFILE ?= /opt/zimbra/log/zmmailboxd.pid
-MAILBOXD_JAVA_PIDFILE ?= /opt/zimbra/log/zmmailboxd_java.pid
-MAILBOXD_CWD ?= /opt/zimbra/log
-JETTY_BASE ?= /opt/zimbra/mailboxd
-JETTY_HOME ?= /opt/zimbra/common/jetty_home
-MAILBOXD_OUTFILE ?= /opt/zimbra/log/zmmailboxd.out
-GC_OUTFILE ?= /opt/zimbra/log/gc.log
-ZIMBRA_LIB ?= /opt/zimbra/lib
-ZIMBRA_USER ?= zimbra
-ZIMBRA_CONFIG ?= /opt/zimbra/conf/localconfig.xml
+JAVA_BINARY ?= /opt/zextras/common/bin/java
+MAILBOXD_MANAGER_PIDFILE ?= /opt/zextras/log/zmmailboxd_manager.pid
+MAILBOXD_MANAGER_DEPRECATED_PIDFILE ?= /opt/zextras/log/zmmailboxd.pid
+MAILBOXD_JAVA_PIDFILE ?= /opt/zextras/log/zmmailboxd_java.pid
+MAILBOXD_CWD ?= /opt/zextras/log
+JETTY_BASE ?= /opt/zextras/mailboxd
+JETTY_HOME ?= /opt/zextras/common/jetty_home
+MAILBOXD_OUTFILE ?= /opt/zextras/log/zmmailboxd.out
+GC_OUTFILE ?= /opt/zextras/log/gc.log
+ZIMBRA_LIB ?= /opt/zextras/lib
+ZIMBRA_USER ?= zextras
+ZIMBRA_CONFIG ?= /opt/zextras/conf/localconfig.xml
 
 LAUNCHER_CFLAGS = \
 	-DJAVA_BINARY='"$(JAVA_BINARY)"' \
