@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2022 Zextras <https://www.zextras.com>
 #
-# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-License-Identifier: GPL-2.0-only
 
 # Build mailboxd launcher and manager process.  Note that paths you
 # specify here must not be owned in the install by less privileged
