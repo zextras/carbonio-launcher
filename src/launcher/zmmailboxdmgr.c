@@ -108,7 +108,6 @@ static const char *DisallowedJVMArgs[] = {
     "-agentlib",
     "-agentpath",
     "-classpath",
-    "-javaagent",
 };
 #endif
 
